@@ -1,5 +1,5 @@
 # Inlämningsuppgift Planned Planthood
-Uppgiften är att göra en sida enligt nedanståend bilder, text och kod-stycken.
+Uppgiften är att göra en sida enligt nedanstående bilder, text och kod-stycken.
 
 ## Inlämning
 * Code review är efter lunch fredagen den 2/1.
