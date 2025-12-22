@@ -45,6 +45,11 @@ h6 {
   text-wrap: balance;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 p,
 li,
 figcaption {
@@ -53,13 +58,13 @@ figcaption {
 }
 
 /* for container queries, landmarks as containers */
-body> :is(header, footer),
+body > :is(header, footer),
 main {
   container-type: inline-size;
 }
 
 /* remove list style but keep it as list for Safari browser - use with <ul role="list"> */
-[role="list"] {
+[role='list'] {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -112,11 +117,10 @@ main {
   --fs-800: 2.5rem;
   --fs-900: 3rem;
 
-
   /*** Theme setup ***/
 
   /* font family */
-  --font-base: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+  --font-base: 'Open Sans', 'Segoe UI', Tahoma, sans-serif;
 
   /* theme color assignments */
   --clr-accent: var(--clr-green-400);
@@ -180,13 +184,12 @@ body {
   color: var(--clr-primary-dark);
 }
 
-
 /*** Composition ***/
-.flow>*+* {
+.flow > * + * {
   margin-block-start: var(--flow-space);
 }
 
-.flow-lg>*+* {
+.flow-lg > * + * {
   margin-block-start: var(--flow-space-lg);
 }
 
@@ -201,14 +204,18 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   --_min-margin-width: 1rem;
 
   display: grid;
-  grid-template-columns: [fullwidth-start] minmax(var(--_min-margin-width), 1fr) [content-start] min(100% - var(--_min-margin-width) * 2,
-      var(--_content-width)) [content-end] minmax(var(--_min-margin-width), 1fr) [fullwidth-end];
+  grid-template-columns:
+    [fullwidth-start] minmax(var(--_min-margin-width), 1fr) [content-start] min(
+      100% - var(--_min-margin-width) * 2,
+      var(--_content-width)
+    )
+    [content-end] minmax(var(--_min-margin-width), 1fr) [fullwidth-end];
   /*  grid-template-rows: [fullwidth-start] auto [fullwidth-end];*/
 }
 
 /* keep the content of the content-grid and fullwidth inside the content container */
-.content-grid>*,
-.fullwidth>* {
+.content-grid > *,
+.fullwidth > * {
   grid-column: content;
 }
 
@@ -219,10 +226,9 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }*/
 
 /* if we have a fullwidth inside of a content-grid put this in the fullwidth container */
-.content-grid>.fullwidth {
+.content-grid > .fullwidth {
   grid-column: fullwidth;
 }
-
 
 /*** Utilities ***/
 
@@ -234,4 +240,41 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.green-main {
+  color: var(--clr-green-400);
+}
+
+/* Main content */
+
+.header {
+  background-color: rgb(164, 226, 213);
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  height: initial;
+
+  div {
+    display: flex;
+    img {
+      width: 3rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--clr-accent);
+  color: white;
+}
+
+.sed {
+  background-color: rgb(183, 145, 221);
 }
