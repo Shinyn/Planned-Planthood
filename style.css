@@ -1,75 +1,3 @@
-/*** Reset ***/
-/* This is from Kevin Powell, edit to your liking */
-
-/* makes sizing simpler */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* remove default spacing */
-/* force styling of type through styling, rather than elements */
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
-/* dark mode user-agent-styles */
-html {
-  color-scheme: dark light;
-}
-
-/* min body height */
-body {
-  min-height: 100vh;
-}
-
-/* responsive images/videos */
-img,
-picture,
-svg,
-video {
-  display: block;
-  max-width: 100%;
-}
-
-/* make headings wrap better */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-p,
-li,
-figcaption {
-  text-wrap: pretty;
-  /* max-width: 55ch; */
-}
-
-/* for container queries, landmarks as containers */
-body > :is(header, footer),
-main {
-  container-type: inline-size;
-}
-
-/* remove list style but keep it as list for Safari browser - use with <ul role="list"> */
-[role='list'] {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 /*** Theme ***/
 
 :root {
@@ -150,6 +78,78 @@ main {
   --flow-space-lg: 4em;
 }
 
+/*** Reset ***/
+/* This is from Kevin Powell, edit to your liking */
+
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+html {
+  color-scheme: dark light;
+}
+
+/* min body height */
+body {
+  min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* make headings wrap better */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+  /* max-width: 55ch; */
+}
+
+/* for container queries, landmarks as containers */
+body > :is(header, footer),
+main {
+  container-type: inline-size;
+}
+
+/* remove list style but keep it as list for Safari browser - use with <ul role="list"> */
+[role='list'] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /*** Global/base ***/
 h1,
 h2,
@@ -182,6 +182,8 @@ body {
   font-family: var(--font-base);
   background-color: var(--clr-accent-light-1);
   color: var(--clr-primary-dark);
+  
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 
 /*** Composition ***/
@@ -198,20 +200,20 @@ See these for more info:
 https://www.youtube.com/watch?v=c13gpBrnGEw
 https://www.youtube.com/watch?v=cf-J4ffMBfo
 */
-.content-grid,
+/* .content-grid,
 .fullwidth {
   --_content-width: 70rem;
   --_min-margin-width: 1rem;
 
   display: grid;
-  grid-template-columns:
-    [fullwidth-start] minmax(var(--_min-margin-width), 1fr) [content-start] min(
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  /* [fullwidth-start] minmax(var(--_min-margin-width), 2fr) [content-start] min(
       100% - var(--_min-margin-width) * 2,
       var(--_content-width)
     )
-    [content-end] minmax(var(--_min-margin-width), 1fr) [fullwidth-end];
-  /*  grid-template-rows: [fullwidth-start] auto [fullwidth-end];*/
-}
+    [content-end] minmax(var(--_min-margin-width), 2fr) [fullwidth-end]; */
+  /* grid-template-rows: [fullwidth-start] auto [fullwidth-end]; */
+} */
 
 /* keep the content of the content-grid and fullwidth inside the content container */
 .content-grid > *,
@@ -250,28 +252,77 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
 .header {
   background-color: #ffffff;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
   padding: 1rem;
 
-  .plannedParenthood-container {
+  .header-container {
     display: flex;
-    img {
-      height: 2rem;
-      margin-right: 0.5rem;
+    justify-content: space-between;
+    .plannedParenthood-container {
+      display: flex;
+      img {
+        height: 2rem;
+        margin-right: 0.5rem;
+      }
+
+      .plannedParenthood {
+        line-height: 0.8;
+        align-self: center;
+        font-weight: var(--fw-500);
+      }
     }
 
-    .plannedParenthood {
-      line-height: 0.8;
-      align-self: center;
-      font-weight: var(--fw-500);
+    ul {
+      display: flex;
+      gap: 1rem;
     }
   }
+}
 
-  ul {
-    display: flex;
-    gap: 1rem;
+h1, h2 {
+  text-align: center;
+  /* background-color: lime; */
+}
+
+.main {
+  background-color: aquamarine;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+
+  .card {
+    background-color: firebrick;
+    /* padding: 1rem; */
+    border-radius: 1rem;
+    /* min-width: 15rem; */
+    height: 100%;
+    
+    align-items: stretch;
+
+
+    img {
+      width: 100%;
+          aspect-ratio: 1/1;
+          border-radius: 1rem 1rem 0 0;
+          overflow: clip;
+          object-fit: cover;
+    }
+
+    .cardInfoBox {
+      /* background-color: lime; */
+      /* border-radius: 1rem; */
+      padding: 1rem;
+    }
+
+    .cardAuthor {
+      img {
+        margin: 1rem;
+        border-radius: 50%;
+        width: 4rem;
+        /* object-fit: cover; */
+      }
+    }
   }
 }
 
@@ -280,8 +331,4 @@ footer {
   justify-content: space-between;
   background-color: var(--clr-accent);
   color: white;
-}
-
-.sed {
-  background-color: rgb(183, 145, 221);
 }
