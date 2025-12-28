@@ -182,7 +182,7 @@ body {
   font-family: var(--font-base);
   background-color: var(--clr-accent-light-1);
   color: var(--clr-primary-dark);
-  
+
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 
@@ -212,7 +212,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
       var(--_content-width)
     )
     [content-end] minmax(var(--_min-margin-width), 2fr) [fullwidth-end]; */
-  /* grid-template-rows: [fullwidth-start] auto [fullwidth-end]; */
+/* grid-template-rows: [fullwidth-start] auto [fullwidth-end];
 } */
 
 /* keep the content of the content-grid and fullwidth inside the content container */
@@ -279,34 +279,86 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   }
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   /* background-color: lime; */
 }
 
+/* header {} */
+
+.plantSection {
+  display: grid;
+  justify-content: center;
+
+  p {
+    text-align: center;
+    max-width: 50ch;
+  }
+
+  .plantGallery {
+    width: 70rem;
+    padding: 1rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgb(68, 30, 30);
+
+    grid-template-areas:
+      'plantGalleryImage1 plantGalleryImage1 plantGalleryImage2 plantGalleryImage3 plantGalleryImage4 plantGalleryImage4'
+      'plantGalleryImage1 plantGalleryImage1 plantGalleryImage5 plantGalleryImage5 plantGalleryImage6 plantGalleryImage6';
+  }
+
+  .plantGalleryImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .image1 {
+    grid-area: plantGalleryImage1;
+  }
+  .image2 {
+    grid-area: plantGalleryImage2;
+  }
+  .image3 {
+    grid-area: plantGalleryImage3;
+  }
+  .image4 {
+    grid-area: plantGalleryImage4;
+  }
+  .image5 {
+    grid-area: plantGalleryImage5;
+  }
+  .image6 {
+    grid-area: plantGalleryImage6;
+  }
+}
+
 .main {
-  background-color: aquamarine;
+  background-color: rgb(12, 27, 22);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 1rem;
   padding: 1rem;
+  color: #ffffff;
 
   .card {
-    background-color: firebrick;
+    background-color: rgb(99, 9, 9);
     /* padding: 1rem; */
     border-radius: 1rem;
     /* min-width: 15rem; */
     height: 100%;
-    
-    align-items: stretch;
 
+    align-items: stretch;
 
     img {
       width: 100%;
-          aspect-ratio: 1/1;
-          border-radius: 1rem 1rem 0 0;
-          overflow: clip;
-          object-fit: cover;
+      aspect-ratio: 1/1;
+      border-radius: 1rem 1rem 0 0;
+      overflow: clip;
+      object-fit: cover;
     }
 
     .cardInfoBox {
