@@ -104,6 +104,7 @@ html {
 /* min body height */
 body {
   min-height: 100vh;
+  /* font-family: var(--font-base); */
 }
 
 /* responsive images/videos */
@@ -284,7 +285,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 h1,
 h2 {
   text-align: center;
-  /* background-color: lime; */
 }
 
 .plantSection {
@@ -392,22 +392,57 @@ h2 {
   }
 }
 
+.plantations {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-block: 3rem;
+  padding-block: 3rem;
+
+  img {
+    border-radius: 50%;
+    width: 15rem;
+    padding: 3.5rem;
+    background-color: var(--clr-accent);
+  }
+
+  .plantationsInfo {
+    max-width: 42ch;
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      padding-bottom: 1rem;
+    }
+    h2 {
+      text-align: start;
+    }
+
+    button {
+      align-self: flex-end;
+      background-color: var(--clr-accent);
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      border-radius: 2rem;
+    }
+  }
+}
+
 .footer {
   display: flex;
   justify-content: space-around;
   background-color: var(--clr-accent);
   color: white;
-  /* padding-inline: 1rem; */
   padding-block: 3rem;
 
   a {
     color: white;
     display: block;
-    /* background-color: palegoldenrod; */
   }
 
   .footerAbout {
-    /* background-color: lime; */
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -417,7 +452,6 @@ h2 {
     }
 
     p {
-      /* background-color: saddlebrown; */
       max-width: 60ch;
     }
 
@@ -427,7 +461,6 @@ h2 {
   }
 
   .footerNavigation {
-    /* background-color: red; */
     display: grid;
   }
 }
