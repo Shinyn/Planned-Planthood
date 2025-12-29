@@ -251,17 +251,16 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 /* Main content */
 
 .header {
-  background-color: #ffffff;
-  align-items: center;
-  padding: 1rem;
+  background-color: white;
+  padding: 0.3rem;
 
   .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     .plannedParenthood-container {
       display: flex;
       img {
-        height: 2rem;
+        height: 2.2rem;
         margin-right: 0.5rem;
       }
 
@@ -274,7 +273,10 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
     ul {
       display: flex;
-      gap: 1rem;
+      gap: 3rem;
+      font-weight: var(--fw-medium);
+      font-size: 0.9rem;
+      align-self: center;
     }
   }
 }
@@ -392,20 +394,40 @@ h2 {
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: var(--clr-accent);
   color: white;
-  padding: 1rem;
+  /* padding-inline: 1rem; */
+  padding-block: 3rem;
 
   a {
     color: white;
+    display: block;
+    /* background-color: palegoldenrod; */
   }
 
-  div {
-    background-color: lime;
+  .footerAbout {
+    /* background-color: lime; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+      text-align: start;
+    }
+
+    p {
+      /* background-color: saddlebrown; */
+      max-width: 60ch;
+    }
+
+    a {
+      font-weight: var(--fw-bold);
+    }
   }
 
-  ul {
-    background-color: red;
+  .footerNavigation {
+    /* background-color: red; */
+    display: grid;
   }
 }
