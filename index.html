@@ -17,7 +17,7 @@
             <p>PLANTHOOD</p>
           </div>
         </div>
-        <ul>
+        <ul role="list">
           <li><a href="">Hem</a></li>
           <li><a href="">Historik</a></li>
           <li><a href="">Tips</a></li>
@@ -26,7 +26,7 @@
       </div>
     </header>
 
-    <!-- Sektion uppskattade växter -->
+    <!-- Sektion - Oppskattade växter -->
     <section class="plantSection">
       <h1>Våra uppskattade växter</h1>
       <p>
@@ -34,7 +34,7 @@
         fugit sapiente sit dolore autem! Expedita illo deleniti maiores harum consequatur debitis hic.
       </p>
       <div class="plantGallery">
-        <!-- img[src="https://picsum.photos/id/43$/1200"][alt="randomImage"].image$*6 -->
+        <!-- img[src="https://picsum.photos/id/43$/1600"][alt="randomImage"].image$*6 -->
         <img src="https://picsum.photos/id/431/1600" alt="randomImage" class="plantGalleryImage image1" />
         <img src="https://picsum.photos/id/432/1600" alt="randomImage" class="plantGalleryImage image2" />
         <img src="https://picsum.photos/id/433/1600" alt="randomImage" class="plantGalleryImage image3" />
@@ -44,8 +44,8 @@
       </div>
     </section>
 
-    <!-- Sektion nyhetsbrev -->
-    <section class="">
+    <!-- Sektion - Anmäl dig till vårt nyhetsbrev -->
+    <section class="newsletter">
       <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
       <form action="" method="POST">
         <label class="visually-hidden" for="email">E-mail</label>
@@ -187,20 +187,22 @@
       </div>
       <div class="card">
         <img src="https://picsum.photos/id/17/200" alt="Random image" class="cardImage" />
-        <div class="cardTags">
-          <p>Blommor</p>
-          <p>Ätbart</p>
-          <p>Grönska</p>
-        </div>
-        <h3 class="cardVegetable">Gurka</h3>
-        <p class="cardDescription">
-          Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning, omplantering,
-          duschning och gödsling.
-        </p>
-        <div class="cardAuthor">
-          <img src="https://i.pravatar.cc/150?img=7" alt="Random avatar image" class="authorImg" />
-          <h4 class="authorName">Coolio</h4>
-          <time datetime="2024-04-01">2024-04-01</time>
+        <div class="cardInfoBox">
+          <div class="cardTags">
+            <p>Blommor</p>
+            <p>Ätbart</p>
+            <p>Grönska</p>
+          </div>
+          <h3 class="cardVegetable">Gurka</h3>
+          <p class="cardDescription">
+            Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
+            omplantering, duschning och gödsling.
+          </p>
+          <div class="cardAuthor">
+            <img src="https://i.pravatar.cc/150?img=7" alt="Random avatar image" class="authorImg" />
+            <h4 class="authorName">Coolio</h4>
+            <time datetime="2024-04-01">2024-04-01</time>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -310,8 +312,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="">
-      <div>
+    <footer class="footer">
+      <div class="about">
         <h2>Om oss</h2>
 
         <p>
@@ -320,15 +322,15 @@
           molestias?
         </p>
 
-        <a href=""> Telefon: 020-1234567 </a>
-        <a href=""> E-post: info@plannedplant.com </a>
+        <a href="tel:020-1234567"> Telefon: 020-1234567 </a>
+        <a href="mailto:info@plannedplant.com"> E-post: info@plannedplant.com </a>
       </div>
 
-      <ul>
-        <li><a href="">Hem</a></li>
-        <li><a href="">Historik</a></li>
-        <li><a href="">Tips</a></li>
-        <li><a href="">Kontakt</a></li>
+      <ul role="list" class="footerNavigation">
+        <li><a href="#">Hem</a></li>
+        <li><a href="#">Historik</a></li>
+        <li><a href="#">Tips</a></li>
+        <li><a href="#">Kontakt</a></li>
       </ul>
     </footer>
   </body>
