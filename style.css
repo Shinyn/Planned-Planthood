@@ -274,10 +274,22 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
     ul {
       display: flex;
-      gap: 3rem;
       font-weight: var(--fw-medium);
       font-size: 0.9rem;
       align-self: center;
+
+      li {
+        a {
+          height: 100%;
+          padding: 1rem;
+          &:hover,
+          &:focus-visible {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: var(--clr-accent);
+          }
+        }
+      }
     }
   }
 }
