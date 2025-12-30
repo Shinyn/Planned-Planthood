@@ -282,6 +282,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
         a {
           height: 100%;
           padding: 1rem;
+
           &:hover,
           &:focus-visible {
             text-decoration: none;
@@ -491,6 +492,14 @@ h2 {
       padding-inline: 1rem;
       padding-block: 0.5rem;
       border-radius: 2rem;
+      border: 1px solid transparent;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--clr-accent);
+        background-color: #ffffff;
+        border: 1px solid var(--clr-accent);
+      }
     }
   }
 }
@@ -520,12 +529,27 @@ h2 {
       max-width: 60ch;
     }
 
-    a {
+    /* Lägg till icon för mail och telefon för :hover */
+
+    .footerContact {
+      /* background-color: rgb(56, 248, 248); */
       font-weight: var(--fw-bold);
+
+      & :first-child {
+        /* background-color: red; */
+      }
+
+      & :last-child {
+        /* background-color: pink; */
+      }
     }
   }
 
   .footerNavigation {
     display: grid;
+
+    a {
+      padding-block: 1rem;
+    }
   }
 }
