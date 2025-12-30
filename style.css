@@ -346,8 +346,66 @@ h2 {
 
 .newsletter {
   background-color: white;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   padding-block: 3rem;
+
+  .newsletterFormAndTitle {
+    max-width: 40ch;
+
+    h2 {
+      text-align: start;
+      font-weight: var(--fw-semi-bold);
+      padding-block: 2rem;
+    }
+
+    form {
+      background-color: #ffffff;
+      width: calc(100% - 4rem);
+      color: black;
+      border: 1px black solid;
+      display: flex;
+      border-radius: 2rem;
+
+      button {
+        border: none;
+        width: 9ch;
+        background-color: var(--clr-accent);
+        padding-block: 0.4rem;
+        padding-inline: 1rem;
+        border-radius: 2rem;
+        margin: 2px;
+        border: 1px solid transparent;
+
+        &:hover {
+          cursor: pointer;
+          color: var(--clr-accent);
+          background-color: #ffffff;
+          border: 1px solid var(--clr-accent);
+        }
+      }
+
+      .emailInput {
+        width: 100%;
+        background-color: #ffffff;
+        color: black;
+        border: none;
+        padding-block: 0.5rem;
+        padding-left: 2rem;
+        margin-right: 0.2rem;
+        border-radius: 2rem 0 0 2rem;
+      }
+    }
+  }
+
+  img {
+    background-color: var(--clr-accent);
+    border-radius: 50%;
+    width: 15rem;
+    padding: 3.5rem;
+  }
 }
 
 .main {
@@ -360,9 +418,7 @@ h2 {
 
   .card {
     background-color: rgb(99, 9, 9);
-    /* padding: 1rem; */
     border-radius: 1rem;
-    /* min-width: 15rem; */
     height: 100%;
 
     align-items: stretch;
@@ -376,8 +432,6 @@ h2 {
     }
 
     .cardInfoBox {
-      /* background-color: lime; */
-      /* border-radius: 1rem; */
       padding: 1rem;
     }
 
@@ -386,7 +440,6 @@ h2 {
         margin: 1rem;
         border-radius: 50%;
         width: 4rem;
-        /* object-fit: cover; */
       }
     }
   }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,21 +46,24 @@
 
     <!-- Sektion - Anmäl dig till vårt nyhetsbrev -->
     <section class="newsletter">
-      <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
-      <form action="" method="POST">
-        <label class="visually-hidden" for="email">E-mail</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          autocomplete="email"
-          inputmode="email"
-          placeholder="tim@example.com"
-          required
-        />
-        <button type="submit">Skicka</button>
-      </form>
-      <img src="" alt="" />
+      <div class="newsletterFormAndTitle">
+        <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+        <form class="newsletterForm" action="" method="POST">
+          <label class="visually-hidden" for="email">E-mail</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            class="emailInput"
+            autocomplete="email"
+            inputmode="email"
+            placeholder="namn@domän.se"
+            required
+          />
+          <button type="submit">Skicka</button>
+        </form>
+      </div>
+      <img src="./assets/images/icon-planting.svg" alt="" />
     </section>
 
     <!-- Test -->
