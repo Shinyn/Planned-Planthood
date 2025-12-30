@@ -309,7 +309,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
         margin-right: 0.5rem;
       }
 
-      .plannedParenthood {
+      .plannedPlanthood {
         line-height: 0.8;
         align-self: center;
         font-weight: var(--fw-500);
@@ -361,12 +361,13 @@ h2 {
   }
 
   .plantGallery {
-    width: 70rem;
+    max-width: 63rem;
+    width: 100%;
     padding: 1rem;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(13rem, 16rem));
     background-color: white;
     box-shadow: var(--border-shadow);
 
