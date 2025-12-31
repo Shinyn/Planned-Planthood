@@ -507,6 +507,15 @@ h2 {
     gap: 1rem;
     padding: 1rem;
 
+    @media (width < 1100px) {
+      width: 100%;
+      grid-template-columns: repeat(3, minmax(10rem, 1fr));
+    }
+
+    @media (width < 760px) {
+      grid-template-columns: minmax(10rem, 1fr);
+    }
+
     .card {
       display: grid;
       grid-template-rows: auto 1fr;
@@ -534,7 +543,6 @@ h2 {
         /* background-color: rgb(123, 218, 79); */
 
         .cardTags {
-          /* max-width: 30ch; */
           display: flex;
           flex-wrap: wrap;
           gap: 0.3rem;
