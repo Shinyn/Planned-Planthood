@@ -104,7 +104,6 @@ html {
 /* min body height */
 body {
   min-height: 100vh;
-  /* font-family: var(--font-base); */
 }
 
 /* responsive images/videos */
@@ -161,6 +160,7 @@ h3 {
 
 h1,
 h2 {
+  text-align: center;
   font-size: var(--fs-700);
 }
 
@@ -345,11 +345,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   }
 }
 
-h1,
-h2 {
-  text-align: center;
-}
-
 .plantSection {
   display: flex;
   flex-direction: column;
@@ -444,7 +439,6 @@ h2 {
 
     h2 {
       text-align: start;
-      font-weight: var(--fw-semi-bold);
       padding-block: 2rem;
 
       @media (width < 760px) {
@@ -536,6 +530,7 @@ h2 {
       background-color: white;
       /* border-radius: 1rem; */
       box-shadow: var(--border-shadow);
+      /* background-color: red; */
 
       img {
         width: 100%;
