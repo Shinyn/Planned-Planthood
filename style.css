@@ -684,6 +684,11 @@ h2 {
   color: white;
   padding-block: 3rem;
 
+  @media (width < 1100px) {
+    justify-content: space-between;
+    padding-inline: 1rem;
+  }
+
   a {
     color: white;
     display: block;
@@ -720,6 +725,10 @@ h2 {
 
   .footerNavigation {
     display: grid;
+
+    @media (width < 760px) {
+      display: none;
+    }
 
     a {
       padding-block: 1rem;
