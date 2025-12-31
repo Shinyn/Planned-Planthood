@@ -433,6 +433,12 @@ h2 {
   gap: 2rem;
   padding-block: 3rem;
 
+  @media (width < 760px) {
+    flex-direction: column-reverse;
+    gap: 0;
+    padding: 1rem;
+  }
+
   .newsletterFormAndTitle {
     max-width: 40ch;
 
@@ -440,11 +446,13 @@ h2 {
       text-align: start;
       font-weight: var(--fw-semi-bold);
       padding-block: 2rem;
+
+      @media (width < 760px) {
+        text-align: center;
+      }
     }
 
     form {
-      background-color: #ffffff;
-      width: calc(100% - 4rem);
       color: black;
       border: 1px black solid;
       display: flex;
@@ -477,6 +485,10 @@ h2 {
         padding-left: 2rem;
         margin-right: 0.2rem;
         border-radius: 2rem 0 0 2rem;
+
+        @media (width < 760px) {
+          padding-left: 1rem;
+        }
       }
     }
   }
@@ -486,6 +498,10 @@ h2 {
     border-radius: 50%;
     width: 15rem;
     padding: 3.5rem;
+
+    @media (width < 760px) {
+      width: min(100%, 20rem);
+    }
   }
 }
 
