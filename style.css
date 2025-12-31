@@ -476,21 +476,25 @@ h2 {
   justify-content: center;
 
   .cardOuterDiv {
+    /* background-color: red; */
     width: 65%;
     display: grid;
-    grid-template-columns: repeat(4, minmax(15rem, 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(4, minmax(13rem, 17rem));
     gap: 1rem;
     padding: 1rem;
 
     .card {
       display: grid;
-      border-radius: 1rem;
+
+      grid-template-rows: auto 1fr;
+      /* border-radius: 1rem; */
       box-shadow: var(--border-shadow);
 
       img {
         width: 100%;
         aspect-ratio: 1/1;
-        border-radius: 1rem 1rem 0 0;
+        /* border-radius: 1rem 1rem 0 0; */
         overflow: clip;
         object-fit: cover;
       }
@@ -500,11 +504,17 @@ h2 {
       }
 
       .cardInfoBox {
+        display: grid;
+        align-items: start;
+
+        grid-template-rows: auto auto 1fr auto;
         padding: 1rem;
+        /* background-color: rgb(123, 218, 79); */
 
         .cardTags {
+          align-content: flex-start;
+          align-items: flex-start;
           max-width: 30ch;
-          padding-bottom: 1rem;
           display: flex;
           flex-wrap: wrap;
           gap: 0.3rem;
@@ -513,29 +523,32 @@ h2 {
             padding-inline: 0.8rem;
             padding-block: 0.2rem;
             border-radius: 1rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
             color: #ffffff;
           }
         }
-      }
 
-      .cardDescription {
-        height: 15ch;
-      }
-
-      .cardAuthor {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-
-        img {
-          border-radius: 50%;
-          width: 4rem;
+        .cardDescription {
+          padding-bottom: 1rem;
         }
 
-        div {
-          .authorName {
-            color: var(--clr-accent);
-            font-weight: var(--fw-bold);
+        .cardAuthor {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          img {
+            border-radius: 50%;
+            width: 4rem;
+          }
+
+          div {
+            .authorName {
+              color: var(--clr-accent);
+              font-weight: var(--fw-bold);
+            }
           }
         }
       }
