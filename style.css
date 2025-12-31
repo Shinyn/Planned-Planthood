@@ -513,9 +513,7 @@ h2 {
 .main {
   display: flex;
   justify-content: center;
-
   .cardOuterDiv {
-    /* background-color: red; */
     width: 65%;
     display: grid;
     justify-content: center;
@@ -535,6 +533,7 @@ h2 {
     .card {
       display: grid;
       grid-template-rows: auto 1fr;
+      background-color: white;
       /* border-radius: 1rem; */
       box-shadow: var(--border-shadow);
 
@@ -615,11 +614,22 @@ h2 {
   margin-block: 3rem;
   padding-block: 3rem;
 
+  @media (width < 760px) {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+    padding-inline: 1rem;
+  }
+
   img {
     border-radius: 50%;
     width: 15rem;
     padding: 3.5rem;
     background-color: var(--clr-accent);
+
+    @media (width < 760px) {
+      width: min(20rem, 100%);
+    }
   }
 
   .plantationsInfo {
@@ -627,11 +637,20 @@ h2 {
     display: flex;
     flex-direction: column;
 
+    @media (width < 760px) {
+      align-items: center;
+      text-align: center;
+    }
+
     & > * {
       padding-bottom: 1rem;
     }
     h2 {
       text-align: start;
+    }
+
+    p {
+      padding-bottom: 2rem;
     }
 
     button {
@@ -641,6 +660,10 @@ h2 {
       padding-block: 0.5rem;
       border-radius: 2rem;
       border: 1px solid transparent;
+
+      @media (width < 760px) {
+        align-self: center;
+      }
 
       &:hover {
         cursor: pointer;
