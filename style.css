@@ -338,6 +338,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
           a {
             height: 100%;
             padding: 1rem;
+            transition: all 0.3s ease-in-out;
 
             &:hover,
             &:focus-visible {
@@ -468,6 +469,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
         border-radius: 2rem;
         margin: 2px;
         border: 1px solid transparent;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
           cursor: pointer;
@@ -662,6 +664,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
       padding-block: 0.5rem;
       border-radius: 2rem;
       border: 1px solid transparent;
+      transition: all 0.3s ease-in-out;
 
       @media (width < 760px) {
         align-self: center;
