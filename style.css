@@ -322,22 +322,29 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
       }
     }
 
-    ul {
+    .headerNavigation {
       display: flex;
-      font-weight: var(--fw-medium);
-      font-size: 0.9rem;
-      align-self: center;
+      ul {
+        display: flex;
+        font-weight: var(--fw-medium);
+        font-size: 0.9rem;
+        align-self: center;
 
-      li {
-        a {
-          height: 100%;
-          padding: 1rem;
+        /* @media (width < 760px) {
+          flex-direction: column;
+        } */
 
-          &:hover,
-          &:focus-visible {
-            text-decoration: none;
-            color: #ffffff;
-            background-color: var(--clr-accent);
+        li {
+          a {
+            height: 100%;
+            padding: 1rem;
+
+            &:hover,
+            &:focus-visible {
+              text-decoration: none;
+              color: #ffffff;
+              background-color: var(--clr-accent);
+            }
           }
         }
       }
@@ -377,7 +384,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
       'plantGalleryImage1 plantGalleryImage1 plantGalleryImage2 plantGalleryImage3 plantGalleryImage4 plantGalleryImage4'
       'plantGalleryImage1 plantGalleryImage1 plantGalleryImage5 plantGalleryImage5 plantGalleryImage6 plantGalleryImage6';
 
-    @media (width < 1440px) {
+    @media (width < 1100px) {
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas:
         'plantGalleryImage1 plantGalleryImage2 plantGalleryImage3 '
@@ -702,18 +709,27 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
       max-width: 60ch;
     }
 
-    /* Lägg till icon för mail och telefon för :hover */
-
     .footerContact {
-      /* background-color: rgb(56, 248, 248); */
       font-weight: var(--fw-bold);
 
-      & :first-child {
-        /* background-color: red; */
-      }
+      a {
+        img {
+          display: inline-block;
+          width: 0;
+          opacity: 0;
+          overflow: hidden;
+          transform: translateX(-8px);
+          transition: all 0.3s ease;
+        }
 
-      & :last-child {
-        /* background-color: pink; */
+        &:hover {
+          img {
+            width: 0.8rem;
+            opacity: 1;
+            margin-right: 0.5rem;
+            transform: translateX(0);
+          }
+        }
       }
     }
   }
