@@ -588,8 +588,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
       .cardInfoBox {
         display: grid;
         align-items: start;
-
-        grid-template-rows: auto auto 1fr auto;
+        grid-template-rows: minmax(3.5rem, auto) auto 1fr auto;
         padding: 1rem;
 
         .cardTags {
