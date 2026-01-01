@@ -553,26 +553,32 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
       /* border-radius: 1rem; */
       box-shadow: var(--border-shadow);
 
-      &::before {
-        content: '';
-        position: absolute;
-        width: 6rem;
-        height: 6rem;
-        background-image: url('./assets/images/icon-watermark.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        pointer-events: none;
-        opacity: 0.4;
-        transform: translate(60%, 60%);
-      }
+      .cardImageContainer {
+        position: relative;
 
-      img {
-        width: 100%;
-        aspect-ratio: 1/1;
-        /* border-radius: 1rem 1rem 0 0; */
-        overflow: clip;
-        object-fit: cover;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 40%;
+          height: 40%;
+          top: 50%;
+          left: 50%;
+          background-image: url('./assets/images/icon-watermark.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          pointer-events: none;
+          opacity: 0.4;
+          transform: translate(-50%, -50%);
+        }
+
+        img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          /* border-radius: 1rem 1rem 0 0; */
+          overflow: clip;
+          object-fit: cover;
+        }
       }
 
       h3 {
