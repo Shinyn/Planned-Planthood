@@ -330,9 +330,10 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
         font-size: 0.9rem;
         align-self: center;
 
-        /* @media (width < 760px) {
-          flex-direction: column;
-        } */
+        @media (width < 760px) {
+          /* flex-direction: column; */
+          display: none;
+        }
 
         li {
           a {
@@ -348,6 +349,14 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
             }
           }
         }
+      }
+    }
+
+    .headerMenuImg {
+      display: none;
+
+      @media (width < 760px) {
+        display: inline-block;
       }
     }
   }
@@ -471,7 +480,8 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
         border: 1px solid transparent;
         transition: all 0.3s ease-in-out;
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
           cursor: pointer;
           color: var(--clr-accent);
           background-color: #ffffff;
@@ -670,7 +680,8 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
         align-self: center;
       }
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         cursor: pointer;
         color: var(--clr-accent);
         background-color: #ffffff;
@@ -725,7 +736,8 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
           transition: all 0.3s ease;
         }
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
           img {
             width: 0.8rem;
             opacity: 1;
