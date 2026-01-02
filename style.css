@@ -183,54 +183,6 @@ body {
   font-family: var(--font-base);
   background-color: var(--clr-accent-light-1);
   color: var(--clr-primary-dark);
-
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-}
-
-/*** Composition ***/
-.flow > * + * {
-  margin-block-start: var(--flow-space);
-}
-
-.flow-lg > * + * {
-  margin-block-start: var(--flow-space-lg);
-}
-
-/*
-See these for more info:
-https://www.youtube.com/watch?v=c13gpBrnGEw
-https://www.youtube.com/watch?v=cf-J4ffMBfo
-*/
-/* .content-grid,
-.fullwidth {
-  --_content-width: 70rem;
-  --_min-margin-width: 1rem;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  /* [fullwidth-start] minmax(var(--_min-margin-width), 2fr) [content-start] min(
-      100% - var(--_min-margin-width) * 2,
-      var(--_content-width)
-    )
-    [content-end] minmax(var(--_min-margin-width), 2fr) [fullwidth-end]; */
-/* grid-template-rows: [fullwidth-start] auto [fullwidth-end];
-} */
-
-/* keep the content of the content-grid and fullwidth inside the content container */
-.content-grid > *,
-.fullwidth > * {
-  grid-column: content;
-}
-
-/* a bit more complex but more fancy/explicit version of above */
-/*.content-grid > :not(.fullwidth),
-.fullwidth > :not(.fullwidth) {
-  grid-column: content;
-}*/
-
-/* if we have a fullwidth inside of a content-grid put this in the fullwidth container */
-.content-grid > .fullwidth {
-  grid-column: fullwidth;
 }
 
 /*** Utilities ***/
@@ -298,6 +250,8 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 .header {
   background-color: white;
   padding: 0.3rem;
+  display: flex;
+  justify-content: center;
 
   @media (width < 760px) {
     padding: 1rem;
@@ -305,7 +259,8 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
   .header-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 70rem;
 
     @media (width < 1100px) {
       justify-content: space-between;
@@ -334,7 +289,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
         align-self: center;
 
         @media (width < 760px) {
-          /* flex-direction: column; */
           display: none;
         }
 
@@ -383,7 +337,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   }
 
   .plantGallery {
-    max-width: 63rem;
+    max-width: 70rem;
     width: 100%;
     padding: 1rem;
     display: grid;
@@ -451,7 +405,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   @media (width < 760px) {
     flex-direction: column-reverse;
     gap: 0;
-    padding: 1rem;
+    padding-inline: 1rem;
   }
 
   .newsletterFormAndTitle {
@@ -530,7 +484,8 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   display: flex;
   justify-content: center;
   .cardOuterDiv {
-    width: 65%;
+    max-width: 70rem;
+    width: 100%;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, minmax(13rem, 16.7rem));
@@ -710,72 +665,76 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 
 .footer {
-  display: flex;
-  justify-content: space-evenly;
-  /* Ful, dålig lösning */
-  padding-inline: 10%;
+  width: 100%;
+
   background-color: var(--clr-accent);
   color: white;
   padding-block: 3rem;
 
-  @media (width < 1100px) {
-    justify-content: space-between;
-    padding-inline: 1rem;
-  }
-
-  a {
-    color: white;
-    display: block;
-  }
-
-  .footerAbout {
+  .footerOuterContainer {
+    min-width: min(70rem, 100%);
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    justify-self: center;
+    justify-content: space-between;
 
-    h2 {
-      text-align: start;
+    @media (width < 1150px) {
+      padding-inline: 1rem;
     }
 
-    p {
-      max-width: 60ch;
+    a {
+      color: white;
+      display: block;
     }
 
-    .footerContact {
-      font-weight: var(--fw-bold);
+    .footerAbout {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
 
-      a {
-        img {
-          display: inline-block;
-          width: 0;
-          opacity: 0;
-          overflow: hidden;
-          transform: translateX(-8px);
-          transition: all 0.3s ease;
-        }
+      h2 {
+        text-align: start;
+      }
 
-        &:hover,
-        &:focus-visible {
+      p {
+        max-width: 60ch;
+      }
+
+      .footerContact {
+        font-weight: var(--fw-bold);
+
+        a {
           img {
-            width: 0.8rem;
-            opacity: 1;
-            margin-right: 0.5rem;
-            transform: translateX(0);
+            display: inline-block;
+            width: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateX(-8px);
+            transition: all 0.3s ease;
+          }
+
+          &:hover,
+          &:focus-visible {
+            img {
+              width: 0.8rem;
+              opacity: 1;
+              margin-right: 0.5rem;
+              transform: translateX(0);
+            }
           }
         }
       }
     }
-  }
 
-  .footerNavigation {
-    display: grid;
+    .footerNavigation {
+      display: grid;
 
-    @media (width < 760px) {
-      display: none;
-    }
+      @media (width < 760px) {
+        display: none;
+      }
 
-    a {
-      padding-block: 1rem;
+      a {
+        padding-block: 1rem;
+      }
     }
   }
 }
