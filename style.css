@@ -488,7 +488,7 @@ body {
     width: 100%;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(4, minmax(13rem, 16.7rem));
+    grid-template-columns: repeat(4, minmax(13rem, 17rem));
     gap: 1rem;
     padding: 1rem;
 
