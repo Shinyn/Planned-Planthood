@@ -261,9 +261,10 @@ body {
     display: flex;
     justify-content: space-between;
     width: 70rem;
+    padding-inline: 1rem;
 
     @media (width < 1100px) {
-      justify-content: space-between;
+      padding: 0;
     }
 
     .plannedParenthood-container {
