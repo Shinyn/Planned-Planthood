@@ -11,7 +11,7 @@
     <header class="header green-main">
       <div class="header-container">
         <div class="plannedParenthood-container">
-          <img src="./assets/images/logo.svg" class="test" alt="" />
+          <img src="./assets/images/logo.svg" alt="" />
           <div class="plannedPlanthood">
             <p>PLANNED</p>
             <p>PLANTHOOD</p>
@@ -25,7 +25,20 @@
             <li><a href="#">KONTAKT</a></li>
           </ul>
         </nav>
-        <img class="headerMenuImg" src="./assets/images/icon-menu.svg" alt="menu" />
+        <svg
+          role="img"
+          aria-label="menu"
+          width="45"
+          height="45"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+          class="icon-menu"
+        >
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
       </div>
     </header>
 
@@ -72,12 +85,7 @@
     <!-- Main -->
     <h2 class="mainTitle">Alla våra växter</h2>
     <main class="main">
-      <!-- https://i.pravatar.cc/150?img=$ -->
-      <!-- https://picsum.photos/id/1$/200 -->
-      <!-- (div.card>img[src="https://picsum.photos/id/1$/200"][alt="Random image"].cardImage+div.cardInfoBox>div.cardTags>(p*3)^h3.cardVegetable+p.cardDescription+(div.cardAuthor>img[src="https://i.pravatar.cc/150?img=$"][alt="Random avatar image"].authorImg+h4.authorName+time))*12 -->
-
-      <!-- Current -->
-      <div class="cardOuterDiv">
+      <div class="cardsContainerDiv">
         <article class="card">
           <div class="cardImageContainer">
             <img src="https://picsum.photos/id/11/200" alt="Gurka" class="cardImage" />
@@ -88,7 +96,7 @@
               <p class="edible">Ätbart</p>
               <p class="green">Grönska</p>
             </div>
-            <h3 class="cardVegetable">Gurka</h3>
+            <h3>Gurka</h3>
             <p class="cardDescription">
               Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
               omplantering, duschning och gödsling.
@@ -112,7 +120,7 @@
               <p class="easy">Lättodlat</p>
               <p class="edible">Ätbart</p>
             </div>
-            <h3 class="cardVegetable">Tomat</h3>
+            <h3>Tomat</h3>
             <p class="cardDescription">
               En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.
             </p>
@@ -136,7 +144,7 @@
               <p class="robust">Tålig</p>
               <p class="flower">Blommor</p>
             </div>
-            <h3 class="cardVegetable">Pelargon</h3>
+            <h3>Pelargon</h3>
             <p class="cardDescription">En vacker och lättskött blomma som trivs både inne och ute under sommaren.</p>
             <div class="cardAuthor">
               <img src="https://i.pravatar.cc/150?img=3" alt="Blomsterkalle" class="authorImg" />
@@ -157,7 +165,7 @@
               <p class="colorful">Färgstark</p>
               <p class="robust">Tålig</p>
             </div>
-            <h3 class="cardVegetable">Basilika</h3>
+            <h3>Basilika</h3>
             <p class="cardDescription">
               En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
             </p>
@@ -180,7 +188,7 @@
               <p class="edible">Ätbart</p>
               <p class="green">Grönska</p>
             </div>
-            <h3 class="cardVegetable">Sallad</h3>
+            <h3>Sallad</h3>
             <p class="cardDescription">
               Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.
             </p>
@@ -203,7 +211,7 @@
               <p class="green">Grönska</p>
               <p class="decorative">Dekorativ</p>
             </div>
-            <h3 class="cardVegetable">Ormbunke</h3>
+            <h3>Ormbunke</h3>
             <p class="cardDescription">En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.</p>
             <div class="cardAuthor">
               <img src="https://i.pravatar.cc/150?img=6" alt="Naturvännen" class="authorImg" />
@@ -224,7 +232,7 @@
               <p class="edible">Ätbart</p>
               <p class="green">Grönska</p>
             </div>
-            <h3 class="cardVegetable">Gurka</h3>
+            <h3>Gurka</h3>
             <p class="cardDescription">
               Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
               omplantering, duschning och gödsling.
@@ -248,7 +256,7 @@
               <p class="easy">Lättodlat</p>
               <p class="edible">Ätbart</p>
             </div>
-            <h3 class="cardVegetable">Tomat</h3>
+            <h3>Tomat</h3>
             <p class="cardDescription">
               En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.
             </p>
@@ -272,7 +280,7 @@
               <p class="robust">Tålig</p>
               <p class="flower">Blommor</p>
             </div>
-            <h3 class="cardVegetable">Pelargon</h3>
+            <h3>Pelargon</h3>
             <p class="cardDescription">En vacker och lättskött blomma som trivs både inne och ute under sommaren.</p>
             <div class="cardAuthor">
               <img src="https://i.pravatar.cc/150?img=9" alt="Blomsterkalle" class="authorImg" />
@@ -293,7 +301,7 @@
               <p class="colorful">Färgstark</p>
               <p class="robust">Tålig</p>
             </div>
-            <h3 class="cardVegetable">Basilika</h3>
+            <h3>Basilika</h3>
             <p class="cardDescription">
               En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
             </p>
@@ -316,7 +324,7 @@
               <p class="edible">Ätbart</p>
               <p class="green">Grönska</p>
             </div>
-            <h3 class="cardVegetable">Sallad</h3>
+            <h3>Sallad</h3>
             <p class="cardDescription">
               Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.
             </p>
@@ -339,7 +347,7 @@
               <p class="green">Grönska</p>
               <p class="decorative">Dekorativ</p>
             </div>
-            <h3 class="cardVegetable">Ormbunke</h3>
+            <h3>Ormbunke</h3>
             <p class="cardDescription">En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.</p>
             <div class="cardAuthor">
               <img src="https://i.pravatar.cc/150?img=12" alt="Naturvännen" class="authorImg" />

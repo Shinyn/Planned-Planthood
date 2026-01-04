@@ -269,6 +269,7 @@ body {
 
     .plannedParenthood-container {
       display: flex;
+      align-items: center;
       img {
         height: 2.2rem;
         margin-right: 0.5rem;
@@ -276,7 +277,6 @@ body {
 
       .plannedPlanthood {
         line-height: 0.8;
-        align-self: center;
         font-weight: var(--fw-500);
       }
     }
@@ -310,11 +310,19 @@ body {
       }
     }
 
-    .headerMenuImg {
+    .icon-menu {
       display: none;
+      padding: 0.3rem;
+      color: black;
 
       @media (width < 760px) {
         display: inline-block;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: var(--clr-accent);
+          color: white;
+        }
       }
     }
   }
@@ -484,7 +492,7 @@ body {
 .main {
   display: flex;
   justify-content: center;
-  .cardOuterDiv {
+  .cardsContainerDiv {
     max-width: 70rem;
     width: 100%;
     display: grid;
